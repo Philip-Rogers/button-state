@@ -47,7 +47,6 @@ button {
 #shiftButton.stopShift {
     background-color: hsl(354, 70%, 54%);
 }
-
 .button-container {
     display: flex;
     flex-direction: column;
