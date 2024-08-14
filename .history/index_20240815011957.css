@@ -109,8 +109,7 @@ button {
     .button-container {
         position: absolute;
         align-items: center;
-        top: 0;
-        bottom: 0;
+        top: 0
         /* padding-bottom: 25%; */
         /* Increased to 20% bottom padding */
     }
@@ -138,9 +137,6 @@ button {
     .button-container {
         gap: 8px;
         align-items: center;
-        align-items: center;
-        top: 0;
-        bottom: 0;
         /* padding-bottom: 25%; */
         /* Increased to 20% bottom padding */
     }
