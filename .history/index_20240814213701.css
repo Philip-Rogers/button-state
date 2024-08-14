@@ -85,21 +85,15 @@ button {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     button {
-        font-size: 1.6875em;
-        /* 35% larger */
-        width: 405px;
-        /* 35% larger */
-        padding: 1.35em 1.6875em;
-        /* 35% larger */
+        font-size: 1.6875em; /* 35% larger */
+        width: 405px; /* 35% larger */
+        padding: 1.35em 1.6875em; /* 35% larger */
     }
 
     .toggle-button {
-        font-size: 21.6px;
-        /* 35% larger */
-        width: 270px;
-        /* 35% larger */
-        padding: 13.5px 27px;
-        /* 35% larger */
+        font-size: 21.6px; /* 35% larger */
+        width: 270px; /* 35% larger */
+        padding: 13.5px 27px; /* 35% larger */
     }
 
     .button-container {
@@ -109,21 +103,15 @@ button {
 
 @media (max-width: 480px) {
     button {
-        font-size: 1.6875em;
-        /* 35% larger */
-        width: 270px;
-        /* 35% larger */
-        padding: 0.675em 1.0125em;
-        /* 35% larger */
+        font-size: 1.6875em; /* 35% larger */
+        width: 270px; /* 35% larger */
+        padding: 0.675em 1.0125em; /* 35% larger */
     }
 
     .toggle-button {
-        font-size: 16.2px;
-        /* 35% larger */
-        width: 202.5px;
-        /* 35% larger */
-        padding: 8.1px 16.2px;
-        /* 35% larger */
+        font-size: 16.2px; /* 35% larger */
+        width: 202.5px; /* 35% larger */
+        padding: 8.1px 16.2px; /* 35% larger */
     }
 
     .button-container {
