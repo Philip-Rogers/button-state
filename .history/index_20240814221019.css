@@ -135,7 +135,7 @@ button {
     .button-container {
         gap: 8px;
         align-items: center;
-        padding-bottom: 25%;
+        padding-bottom: 20%;
         /* Increased to 20% bottom padding */
     }
 }
