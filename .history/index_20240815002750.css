@@ -15,7 +15,7 @@
 
 body {
     font-family: "Brandon Grotesque";
-    background-color: hsl(225, 9%, 17%);
+    background-color: 'hsl(205, 100%, 39%)';
     margin: 0;
     display: flex;
     justify-content: center;
@@ -107,7 +107,6 @@ button {
     }
 
     .button-container {
-        position: absolute;
         align-items: center;
         /* padding-bottom: 25%; */
         /* Increased to 20% bottom padding */

@@ -107,7 +107,7 @@ button {
     }
 
     .button-container {
-        position: absolute;
+        position: absolute
         align-items: center;
         /* padding-bottom: 25%; */
         /* Increased to 20% bottom padding */
