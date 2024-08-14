@@ -26,6 +26,15 @@ button {
     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0004);
 }
 
+/* #shiftButton {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+} */
+
 #shiftButton i {
     margin-right: 8px;
 }

@@ -13,8 +13,7 @@ button {
     display: block;
     border-radius: 5px;
     /* background-color: hsl(205, 100%, 39%); */
-    background-color: hsl(140, 100%, 35%);
-    /* Green for Start Shift */
+    background-color: hsl(140, 100%, 35%); /* Green for Start Shift */
     color: hsl(354, 70%, 100%);
     padding: 1em 1.25em;
     width: 300px;
@@ -26,11 +25,21 @@ button {
     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0004);
 }
 
+#shiftButton {
+    color: white;
+    background-color: hsl(140, 100%, 35%); /* Green for Start Shift */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 #shiftButton i {
     margin-right: 8px;
 }
 
 #shiftButton.stopShift {
-    background-color: hsl(354, 70%, 54%);
-    /* Red for Stop Shift */
+    background-color: hsl(354, 70%, 54%); /* Red for Stop Shift */
 }
