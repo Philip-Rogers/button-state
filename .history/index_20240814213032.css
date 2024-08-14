@@ -22,8 +22,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
-    /* Prevent scrolling */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 button {
@@ -86,21 +85,15 @@ button {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     button {
-        font-size: 1.5em;
-        /* 20% larger */
-        width: 360px;
-        /* 20% larger */
-        padding: 1.2em 1.5em;
-        /* 20% larger */
+        font-size: 1.5em; /* 20% larger */
+        width: 360px; /* 20% larger */
+        padding: 1.2em 1.5em; /* 20% larger */
     }
 
     .toggle-button {
-        font-size: 19.2px;
-        /* 20% larger */
-        width: 240px;
-        /* 20% larger */
-        padding: 12px 24px;
-        /* 20% larger */
+        font-size: 19.2px; /* 20% larger */
+        width: 240px; /* 20% larger */
+        padding: 12px 24px; /* 20% larger */
     }
 
     .button-container {
@@ -110,21 +103,15 @@ button {
 
 @media (max-width: 480px) {
     button {
-        font-size: 1.05em;
-        /* 20% larger */
-        width: 240px;
-        /* 20% larger */
-        padding: 0.6em 0.9em;
-        /* 20% larger */
+        font-size: 1.05em; /* 20% larger */
+        width: 240px; /* 20% larger */
+        padding: 0.6em 0.9em; /* 20% larger */
     }
 
     .toggle-button {
-        font-size: 14.4px;
-        /* 20% larger */
-        width: 180px;
-        /* 20% larger */
-        padding: 7.2px 14.4px;
-        /* 20% larger */
+        font-size: 14.4px; /* 20% larger */
+        width: 180px; /* 20% larger */
+        padding: 7.2px 14.4px; /* 20% larger */
     }
 
     .button-container {
