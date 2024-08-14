@@ -1,0 +1,39 @@
+/* Container for the buttons to ensure they stack vertically */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align buttons to the start of the container */
+    gap: 10px;
+    /* Space between the buttons */
+}
+
+/* Style for the toggle buttons */
+.toggle-button {
+    color: white;
+    background-color: hsl(140, 100%, 35%);
+    /* Default green for Start Shift */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    /* Fixed width for consistency */
+}
+
+#lunchButton,
+#openDoorButton {
+    background-color: hsl(205, 100%, 39%);
+    /* Default blue color for Start Lunch and Open Door */
+}
+
+.toggle-button i {
+    margin-right: 8px;
+}
+
+.toggle-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

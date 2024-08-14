@@ -1,0 +1,76 @@
+body {
+    background-color: hsl(225, 9%, 17%);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    font-size: 1.25em;
+    display: block;
+    border-radius: 5px;
+    /* background-color: hsl(205, 100%, 39%); */
+    background-color: hsl(140, 100%, 35%);
+    /* Green for Start Shift */
+    color: hsl(354, 70%, 100%);
+    padding: 1em 1.25em;
+    width: 300px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all .2s ease-in-out;
+    /* -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0004); */
+}
+
+
+#shiftButton i {
+    margin-right: 8px;
+}
+
+#shiftButton.stopShift {
+    background-color: hsl(354, 70%, 54%);
+    /* Red for Stop Shift */
+}
+
+
+
+
+
+
+/* Container for the buttons to ensure they stack vertically */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the start of the container */
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Style for the toggle buttons */
+.toggle-button {
+    color: white;
+    background-color: hsl(140, 100%, 35%); /* Default green for Start Shift */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 200px; /* Fixed width for consistency */
+}
+
+#lunchButton, #openDoorButton, #placeholderButton1, #placeholderButton2 {
+    background-color: hsl(205, 100%, 39%); /* Default blue color for Start Lunch, Open Door, and Placeholder buttons */
+}
+
+.toggle-button i {
+    margin-right: 8px;
+}
+
+.toggle-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

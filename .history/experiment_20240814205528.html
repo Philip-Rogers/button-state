@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift and Lunch Toggle Buttons</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Modal styles */
+
+
+
+
+
+        .close {
+            color: hsl(354, 70%, 100%);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: hsl(225, 9%, 17%);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Info icon styling */
+        #infoIcon {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: hsl(205, 100%, 39%);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            aspect-ratio: 16 / 9;
+            background-color: hsl(205, 100%, 39%);
+            /* Background color for the modal */
+            backdrop-filter: blur(10px);
+            /* Blur the background behind the modal */
+            border-radius: 20px;
+            padding: 3em;
+            /* Padding to create space around the modal content */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Soft shadow for depth */
+            box-sizing: border-box;
+        }
+
+        #layer {
+            background-color: hsl(205, 100%, 39%);
+            /* Match modal background */
+            margin: auto;
+            border-radius: 20px;
+            height: 100%;
+            /* backdrop-filter: blur(10px); */
+            /* Apply blur to the layer too */
+        }
+
+        .modal-content {
+            background-color: hsl(225, 9%, 17%);
+            /* Background color for the modal content */
+            color: hsl(354, 70%, 100%);
+            margin: auto;
+            padding: 3em;
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* Light border for separation */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+        }
+
+        /* Adjusting the content within the modal-content */
+        .modal-content>* {
+            max-width: 90%;
+            /* Ensure content doesn't overflow */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Info Icon to trigger modal -->
+    <div style="position: fixed; top: 10px; right: 10px;">
+        <i class="fa fa-info-circle" id="infoIcon"></i>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Button Information</h2>
+            <p><strong>Start Shift:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p><strong>Start Lunch:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p><strong>Button 1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+            <p><strong>Button 2:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </div>
+
+    <!-- Container to hold all buttons -->
+    <div class="button-container">
+        <!-- Shift Button -->
+        <button id="shiftButton" class="toggle-button" onclick="toggleShift()">
+            <i class="fa fa-play"></i> Start Shift
+        </button>
+
+        <!-- Lunch Button -->
+        <button id="lunchButton" class="toggle-button" onclick="toggleLunch()" disabled>
+            <i class="fa fa-utensils"></i> Start Lunch
+        </button>
+
+        <!-- Placeholder Button 1 -->
+        <button id="placeholderButton1" class="toggle-button">
+            <i class="fa fa-cogs"></i> Button
+        </button>
+
+        <!-- Placeholder Button 2 -->
+        <button id="placeholderButton2" class="toggle-button">
+            <i class="fa fa-cogs"></i> Button
+        </button>
+    </div>
+
+    <script>
+        // Modal script
+        var modal = document.getElementById("infoModal");
+        var btn = document.getElementById("infoIcon");
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the icon, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        let shiftState = 'start'; // Tracks the state of the Shift button
+        let lunchState = 'start'; // Tracks the state of the Lunch button
+
+        // Function to toggle the Shift button text and color
+        function toggleShift() {
+            const shiftButton = document.getElementById('shiftButton');
+            const lunchButton = document.getElementById('lunchButton');
+
+            if (shiftState === 'start') {
+                shiftButton.innerHTML = '<i class="fa fa-stop"></i> Stop Shift';
+                shiftButton.style.backgroundColor = 'hsl(354, 70%, 54%)'; // Red for Stop Shift
+                shiftState = 'stop';
+                lunchButton.disabled = false; // Enable the Lunch button when Shift is started
+                lunchButton.style.backgroundColor = 'hsl(140, 100%, 35%)'; // Change background color to green
+            } else {
+                // Revert all buttons to their default state
+                shiftButton.innerHTML = '<i class="fa fa-play"></i> Start Shift';
+                shiftButton.style.backgroundColor = 'hsl(140, 100%, 35%)'; // Green for Start Shift
+                shiftState = 'start';
+                lunchButton.disabled = true; // Disable the Lunch button when Shift is stopped
+                lunchButton.innerHTML = '<i class="fa fa-utensils"></i> Start Lunch'; // Reset Lunch button text
+                lunchButton.style.backgroundColor = 'hsl(205, 100%, 39%)'; // Reset Lunch button color
+                lunchState = 'start'; // Reset Lunch button state
+            }
+        }
+
+        // Function to toggle the Lunch button text and color
+        function toggleLunch() {
+            const shiftButton = document.getElementById('shiftButton');
+            const lunchButton = document.getElementById('lunchButton');
+
+            if (lunchState === 'start') {
+                lunchButton.innerHTML = '<i class="fa fa-stop"></i> Stop Lunch';
+                lunchButton.style.backgroundColor = 'hsl(354, 70%, 54%)'; // Red for Stop Lunch
+
+                if (shiftState === 'stop') {
+                    shiftButton.style.backgroundColor =
+                        'hsl(354, 70%, 44%)'; // Darkened red for Stop Shift when disabled
+                    shiftButton.disabled = true; // Disable the Stop Shift button
+                }
+
+                lunchState = 'stop';
+            } else {
+                lunchButton.innerHTML = '<i class="fa fa-utensils"></i> Start Lunch';
+                lunchButton.style.backgroundColor = 'hsl(205, 100%, 39%)'; // Blue background for Stop Lunch
+                lunchButton.disabled = true; // Disable the Stop Lunch button
+
+                if (shiftState === 'stop') {
+                    shiftButton.style.backgroundColor = 'hsl(354, 70%, 54%)'; // Restore the red color for Stop Shift
+                    shiftButton.disabled = false; // Re-enable the Stop Shift button
+                }
+
+                lunchState = 'start';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
