@@ -63,12 +63,12 @@
         shiftButton.addEventListener('mouseout', revertHover);
 
         // Handle mobile touch events
-        shiftButton.addEventListener('touchstart', function (event) {
+        shiftButton.addEventListener('touchstart', function(event) {
             event.preventDefault();
             simulateHover();
         });
 
-        shiftButton.addEventListener('touchend', function (event) {
+        shiftButton.addEventListener('touchend', function(event) {
             event.preventDefault();
             revertHover();
         });
