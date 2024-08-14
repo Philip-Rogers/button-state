@@ -54,6 +54,11 @@ button {
     /* Red for Stop Shift */
 }
 
+
+
+
+
+
 /* Container for the buttons to ensure they stack vertically */
 .button-container {
     display: flex;
